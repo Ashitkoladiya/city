@@ -13,15 +13,22 @@ class container extends Component {
             Country : 'uk'
         })
     }
+
+   
+    
     
     render() {
         return (
            <>
             <div>country:{this.state.Country}</div>
             <button onClick={()=>this.Country()}>change</button>
+
+
+            <div>city :{this.state.City}</div>
+            <button onClick={()=>this.City()}>change</button>
            </>
         );
     }
 }
 
-export default container;
+export default City;
