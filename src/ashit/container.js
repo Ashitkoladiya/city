@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
+import App from '../App';
 
 function container(props) {
 
-    const [Country , setcountry]=useState('india');
-    const [gdp,setGDP]=useState(0);
+    const [Country , setCountry]=useState('india');
+    const [Gdp,setGdp]=useState(0);
 
     const Change = ()=>{
-        setcountry('UK');
+        setCountry('UK')
     }
-    const ChangeGDP =()=>{
-        setGDP('5.5');
-    }
+ 
+    
     return (
         <div>
-            <p>Country[function based componets]:{Country}</p>
+            <p>Country:{Country}</p>
             <button onClick={()=>Change()}>Change</button>
 
-            <p>GDP[function based componets]:{gdp}</p>
-            <button onClick={()=>ChangeGDP}>Change</button>
+            <p>GDP :{Gdp}</p>
+            <button onClick={()=>setGdp(5.5)}>Change GDP</button>
         </div>
     );
 }
