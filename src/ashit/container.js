@@ -3,15 +3,23 @@ import App from '../App';
 
 function container(props) {
 
-    const [Country , setCountry]=useState('india');
-    const [Gdp,setGdp]=useState(0);
+
+    const [Country , setCountry] = useState('india');
+    const [Gdp,setGdp] = useState(0);
 
     const Change = ()=>{
         setCountry('UK')
     }
- 
+
+   
+      {
+          "india" === {Country} ? "famash place":{city} 
+      }
     
     return (
+       <>
+       
+        
         <div>
             <p>Country:{Country}</p>
             <button onClick={()=>Change()}>Change</button>
@@ -19,6 +27,7 @@ function container(props) {
             <p>GDP :{Gdp}</p>
             <button onClick={()=>setGdp(5.5)}>Change GDP</button>
         </div>
+       </>
     );
 }
 
