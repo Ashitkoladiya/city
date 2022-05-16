@@ -1,47 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import Time from './time/time';
-import City from './ashit/city';
-import Timmefun from './time/Timmefun';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Loading from './compontes/Loading';
 import Home from './container/Home';
 
 const HomeWithLoading = Loading(Home)
 function App() {
- 
-
-  const [Loading,setLoading]=useState(false);
-  const [Data,setData]=useState([]);
+  const [loading,setLoading]=useState(false);
+  const [data,setdata]=useState([]);
 
   let orgdata=[
-    {
-      id :101,
-      name:'ashit'
-    },
-    {
-      id:102,
-      name:'koladiya'
-    }
+    {id:101, name :"Ashit"},
+    {id:102,name:"Dishant"},
+    {id:103,name:"Denshi"}
   ]
 
-  useEffect (
-    ()=>
-    {
+  useEffect(
+    ()=>{
       setLoading(true);
-      setTimeout(()=>{setLoading(false);setData(orgdata)},2000);
-    },[]
-  )
-
- 
+      setTimeout(() => {setLoading(false);setdata(orgdata)}, 2000);
+    },
+    [])
+  console.log(loading,data);
   return (
-   <>
-    <HomeWithLoading 
-    isLoading={Loading}
-    data={Data}
-    />
-
-   </>
+    <>
+    <HomeWithLoading  
+      isLoading={loading}
+      data={data}
+      />
+    </>
   );
 }
 
