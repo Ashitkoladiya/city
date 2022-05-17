@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Loading from './compontes/Loading';
 import Home from './container/Home';
 import Incri from './new/Incri';
-import Timmefun from './time/Timmefun';
 
-// const HomeWithLoading = Loading(Home)
+const HomeWithLoading = Loading(Home)
 function App() {
   
   // const [loading,setLoading]=useState(false);
@@ -31,7 +30,6 @@ function App() {
       /> */}
 
       <Incri />
-      {/* <Timmefun/> */}
     </>
   );
 }
